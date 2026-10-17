@@ -1,22 +1,24 @@
-BOX! BOX! BOX! — playable browser prototype
-============================================
+BOX! BOX! BOX! — 2-Player Browser Prototype
+==========================================
 
-WHAT'S INCLUDED
-- Split-screen game view: pit garage on the left, closed-loop race track on the right.
-- Two-player asymmetric setup: mechanic on the iPad, driver controlled by a phone.
-- Phone controller with virtual joystick, gas, brake, radio/box and boost.
-- Five-digit pairing code using PeerJS WebRTC connection.
-- Retro pixel-art-inspired visuals, race timer/laps, tyre wear, damage and pit task progress.
-- PWA manifest and service worker for adding the game to the Home Screen.
+HOSTING
+- Upload the CONTENTS of this folder to the root of your GitHub Pages repository.
+- Keep index.html, manifest.json, sw.js, and assets/ together.
+- Open the published HTTPS address on the iPad and choose “SPIEL AUF DIESEM iPad STARTEN”.
+- Open the same address on the phone, choose “HANDY ALS CONTROLLER”, enter the five-digit code and connect.
+- Keep internet enabled on both devices during pairing. PeerJS public signaling is used.
 
-HOW TO RUN
-1. Host the folder on any HTTPS static web host (for example GitHub Pages or Netlify) or a local web server.
-2. Open index.html on the iPad, preferably in landscape, and tap “Spiel auf diesem iPad starten”.
-3. Open the same hosted URL on the phone and tap “Handy als Controller”.
-4. Enter the five-digit code shown on the iPad and tap “Verbinden”.
-5. The phone controls the driver; the iPad displays the split-screen and can control the mechanic with WASD / E or touch.
+CURRENT FEATURES
+- Existing split-screen layout is preserved: pit garage on the left, closed loop track on the right.
+- Two-device PeerJS pairing and phone driver controls (joystick, gas, brake, radio/box, boost).
+- The race car advances continuously around a closed oval track instead of jumping according to elapsed time.
+- Steering influences speed; tyre wear, damage, lap counter and boost remain active.
+- Mechanic can be moved around the garage with WASD and by tapping a destination on the garage canvas; holding/interacting progresses pit work.
+- PWA files for adding the site to the iPhone/iPad Home Screen.
 
-IMPORTANT
-- The two devices need internet during pairing; PeerJS's public broker is used for WebRTC signaling. A hosted static URL is required for dependable use across devices. Opening the HTML as a local file on one device will not make it reachable from the other.
-- This is a playable prototype, not a finished commercial game. The art is currently drawn procedurally in canvas, not yet a cleaned production tileset/sprite atlas. The circuit and pit tasks are prototype mechanics and can be expanded in the next iteration.
-- On iPad, use Safari Share → Add to Home Screen after opening the hosted URL.
+ART
+- assets/racetrack-concept.png and assets/character-car-concept.png are the supplied concept sheets for visual reference.
+- The in-game canvas still draws prototype pixel graphics procedurally. The concept sheets are not yet cleaned, individual animation sprite atlases; those need the original separate animation frames to be integrated correctly.
+
+NOTE
+This is an improved playable prototype, not a finished commercial game. Test the two-device connection and gameplay on the actual devices after publishing. If PeerJS reports an error, note the exact error shown on the screen.
