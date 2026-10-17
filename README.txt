@@ -1,22 +1,32 @@
-BOX! BOX! BOX! — playable browser prototype
-============================================
+BOX! BOX! BOX! — 2-player mobile/iPad prototype
+================================================
 
-WHAT'S INCLUDED
-- Split-screen game view: pit garage on the left, closed-loop race track on the right.
-- Two-player asymmetric setup: mechanic on the iPad, driver controlled by a phone.
-- Phone controller with virtual joystick, gas, brake, radio/box and boost.
-- Five-digit pairing code using PeerJS WebRTC connection.
-- Retro pixel-art-inspired visuals, race timer/laps, tyre wear, damage and pit task progress.
-- PWA manifest and service worker for adding the game to the Home Screen.
+INCLUDED
+- Split-screen prototype: pit garage + closed-loop circuit.
+- iPad host role and phone driver controller.
+- Five-digit room code with PeerJS WebRTC signaling.
+- Phone controls: steering stick, gas, brake, radio/box, boost.
+- iPad mechanic controls: WASD + E or touch.
+- Lap timer, lap count, tyre wear, damage and pit-task progress.
+- PWA manifest/service worker for Add to Home Screen.
+- Concept artwork included locally in assets/:
+  * racetrack-concept.png — closed-loop track/paddock visual reference.
+  * character-car-concept.png — car/driver/mechanic visual reference.
 
-HOW TO RUN
-1. Host the folder on any HTTPS static web host (for example GitHub Pages or Netlify) or a local web server.
-2. Open index.html on the iPad, preferably in landscape, and tap “Spiel auf diesem iPad starten”.
-3. Open the same hosted URL on the phone and tap “Handy als Controller”.
-4. Enter the five-digit code shown on the iPad and tap “Verbinden”.
-5. The phone controls the driver; the iPad displays the split-screen and can control the mechanic with WASD / E or touch.
+PUBLISH ON GITHUB PAGES
+1. Unzip the package.
+2. Upload the CONTENTS of the BOX_BOX_BOX folder to the root of your GitHub repository.
+   index.html must be at the repository root, with manifest.json, sw.js and assets/ beside it.
+3. In Settings > Pages, choose Deploy from a branch, branch main, folder /(root).
+4. Open the published HTTPS URL on the iPad and choose “SPIEL AUF DIESEM iPad STARTEN”.
+5. Open the same URL on the phone, choose “HANDY ALS CONTROLLER”, enter the code shown on the iPad and press VERBINDEN.
 
-IMPORTANT
-- The two devices need internet during pairing; PeerJS's public broker is used for WebRTC signaling. A hosted static URL is required for dependable use across devices. Opening the HTML as a local file on one device will not make it reachable from the other.
-- This is a playable prototype, not a finished commercial game. The art is currently drawn procedurally in canvas, not yet a cleaned production tileset/sprite atlas. The circuit and pit tasks are prototype mechanics and can be expanded in the next iteration.
-- On iPad, use Safari Share → Add to Home Screen after opening the hosted URL.
+CONNECTION NOTES
+- Both devices need internet during initial pairing. PeerJS uses its public signaling service; actual WebRTC connectivity can still be blocked by some networks. GitHub Pages hosts static files only; it is not a multiplayer server.
+- Keep the iPad host page open while connecting the phone. If the code fails, reload both devices and create a fresh code.
+- This package has not been live-tested on the user's devices.
+
+IMPORTANT SCOPE / ART STATUS
+This is a prototype, not a finished production game. The active game scene still draws its simple pixel-style car, track and mechanic procedurally in Canvas. The supplied concept images are bundled and shown in the start menu as visual references; they are not yet cleaned individual animation frames or a fully tiled playable track. The earlier exact animation sprite sheets were not present in the available project files, so they have not been falsely represented as integrated. The pit stop and lap systems are basic prototype mechanics and need further testing/polish.
+
+On iPhone/iPad Safari, use Share > Add to Home Screen to install the PWA shortcut.
