@@ -1,0 +1,11 @@
+{
+  "name": "BOX BOX BOX — DTM Pit Manager",
+  "short_name": "Pit Manager",
+  "description": "DTM team management and multiplayer pit stop prototype.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#10151c",
+  "theme_color": "#10151c",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
