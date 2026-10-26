@@ -26,3 +26,13 @@ Die 2026er Namen und Teams orientieren sich an der veröffentlichten DTM-Starter
 
 ## Hinweis
 Fan-made Konzeptprojekt. Nicht mit DTM, ADAC, Nürburgring oder den genannten Teams verbunden. Logos, offizielle Fotos und geschützte Grafiken sind nicht enthalten.
+
+## Version 0.3 – Rennmodus überarbeitet
+
+- Sobald ein Rennen läuft, werden Investitionen, Personal-Upgrades und Teambüro ausgeblendet bzw. gesperrt.
+- Die Garage bleibt der Spielort; während des Rennens stehen Rennansicht, Reifenstatus, Strategie/Funk und Fahrzeugstatus im Vordergrund.
+- Die Rennansicht enthält eine schematische Streckenvisualisierung, Live-Session-Status und kompakteres Timing.
+- Während des Rennens stehen eigene Aktionen für Boxenstopp, Teamfunk, Reifenzustand und Fahrzeugstatus bereit.
+- Kein Handy-Controller oder Multiplayer-Setup erforderlich; dieser Prototyp ist ein Einzelspieler-Clicker.
+
+Für GitHub Pages die Dateien `index.html`, `styles.css`, `app.js`, `manifest.webmanifest` und `icon.svg` direkt in den Root des Repositorys hochladen/ersetzen. `README.md` ist die Anleitung.
